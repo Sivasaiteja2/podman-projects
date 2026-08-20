@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podman Project 3</title>
+</head>
+<body>
+    <h1>Podman Multi-Container Application</h1>
+    <p>Frontend is running through Nginx.</p>
+    <p>Nginx → Flask Backend → PostgreSQL</p>
+
+    <button onclick="checkBackend()">Check Backend</button>
+    <p id="result"></p>
+
+    <script>
+        async function checkBackend() {
+            try {
+                const response = await fetch("http://localhost:5000");
+                const data = await response.json();
+                document.getElementById("result").innerText = data.message;
+            } catch (error) {
+                document.getElementById("result").innerText =
+                    "Backend connection failed";
+            }
+        }
+    </script>
+</body>
+</html>

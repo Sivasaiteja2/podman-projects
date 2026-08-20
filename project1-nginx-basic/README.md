@@ -6,7 +6,7 @@ Run an Nginx container using Podman, expose it on port 8080, inspect logs, enter
 ## Commands
 
 ```bash
-podman pull nginx
+podman pull docker.io/library/nginx:latest
 podman images
 
 podman run -d --name my-nginx -p 8080:80 nginx

@@ -1,4 +1,4 @@
-# Podman Practical Projects 1-3
+# Podman Practical Projects
 
 This repository contains the first three hands-on Podman projects.
 
